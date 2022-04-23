@@ -2,11 +2,14 @@ import React from "react";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 // Components
-import Nav from "./components/Nav/Nav"
+import Nav from "./components/Nav/Nav";
 
 // Pages
 import HomePage from "./pages/HomePage";
 import ProjectPage from "./pages/ProjectPage";
+
+// Styles
+import "./App.css";
 
 function App() {
   return (
