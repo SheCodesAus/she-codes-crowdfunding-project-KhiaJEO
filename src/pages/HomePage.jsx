@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 
 // Data
-import { allProjects } from "../data";
+// import { allProjects } from "../data";
 
 function HomePage() {
   // States

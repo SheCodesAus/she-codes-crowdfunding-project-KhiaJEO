@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Components
 import Nav from "./components/Nav/Nav";
@@ -7,6 +7,7 @@ import Nav from "./components/Nav/Nav";
 // Pages
 import HomePage from "./pages/HomePage";
 import ProjectPage from "./pages/ProjectPage";
+import LoginPage from "./pages/LoginPage";
 
 // Styles
 import "./App.css";
@@ -17,8 +18,9 @@ function App() {
       <div>
         <Nav />
         <Routes>
-          <Route path="/project/:id" element={<ProjectPage />} />
           <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/project/:id" element={<ProjectPage />} />
         </Routes>
       </div>
     </Router>
