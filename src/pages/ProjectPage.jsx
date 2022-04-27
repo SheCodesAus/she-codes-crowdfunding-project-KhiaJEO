@@ -7,7 +7,6 @@ import { useParams } from "react-router-dom";
 // Components
 import ProjectOwner from "../components/pages/ProjectOwner/ProjectOwner";
 
-
 function ProjectPage() {
   // State
   const [projectData, setProjectData] = useState({ pledges: [] });
@@ -34,8 +33,8 @@ function ProjectPage() {
   return (
     <div>
       <h2>{projectData.title}</h2>
-      {/* <h3>Created at: {projectData.date_created} /> on {projectData.date_created</h3> */}
-      <h3>Created by: <ProjectOwner owner={projectData.owner</h3>
+      <h3>Created at: {projectData.date_created}</h3>
+      {/* <h3>Created by: <ProjectOwner owner={projectData.owner}></h3> */}
       <h3>{`Status: ${projectData.is_open}`}</h3>
       <h3>Pledges:</h3>
       <ul>
