@@ -8,6 +8,7 @@ import Nav from "./components/Nav/Nav";
 import HomePage from "./pages/HomePage";
 import ProjectPage from "./pages/ProjectPage";
 import LoginPage from "./pages/LoginPage";
+import ProjectPledgesPage from "./pages/ProjectPledgesPage";
 
 // Styles
 import "./App.css";
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/project/:id" element={<ProjectPage />} />
+          <Route path="/pledge/:id" element={<ProjectPledgesPage />} />
         </Routes>
       </div>
     </Router>
