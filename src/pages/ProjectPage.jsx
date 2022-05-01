@@ -49,7 +49,7 @@ function ProjectPage() {
           );
         })}
       </ul>
-      <Link to="/pledges">Donate</Link>
+      <Link to={`/pledges/${id}`}>Donate</Link>
     </div>
   );
 }
