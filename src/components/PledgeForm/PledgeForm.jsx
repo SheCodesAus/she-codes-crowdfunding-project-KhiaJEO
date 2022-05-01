@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 
 function PledgeForm(pledgeData) {
   //State
-  const [pledge, postPledge] = useState(pledgeData);
+  const [pledge, postPledge] = useState(pledgeData.map);
   // // Hooks
   const { id } = useParams();
   const navigate = useNavigate();
