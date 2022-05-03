@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 // Components
 import ProjectOwner from "../components/ProjectOwner/ProjectOwner";
+import PledgeUser from "../components/PledgeUser/PledgeUser";
 
 function ProjectPage() {
   // State
@@ -40,7 +41,7 @@ function ProjectPage() {
       </h3>
       <h3>{`Status: ${projectData.is_open}`}</h3>
       <h3>Pledges:</h3>
-      <ul>
+      {/* <ul>
         {projectData.pledges.map((pledgeData, key) => {
           return (
             <li>
@@ -48,8 +49,21 @@ function ProjectPage() {
             </li>
           );
         })}
-      </ul>
+      </ul> */}
       <Link to={`/pledges/${id}`}>Donate</Link>
+      <h3>Donations:</h3>
+      <ul>
+        {projectData.pledges.map((pledgeData, key) => {
+          return (
+            <PledgeUser
+              key={`pledge-${pledgeData.id}`}
+              amount={pledgeData.amount}
+              supporter={pledgeData.supporter}
+              comment={pledgeData.comment}
+            />
+          );
+        })}
+      </ul>
     </div>
   );
 }

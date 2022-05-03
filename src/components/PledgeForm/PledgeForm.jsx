@@ -21,20 +21,29 @@ function PledgeForm(pledgeData) {
   };
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (pledge.username && pledge.password) {
+    const token = window.localStorage.getItem("token");
+    console.log("handleSubmit", pledge, token);
+    // is the user logged in and have they filled out the fields - if yes then submit the pledge:
+    if (token && pledge.amount && pledge.comment) {
       try {
         const response = await fetch(
-          `${process.env.REACT_APP_API_URL}pledges/${id}`,
+          `${process.env.REACT_APP_API_URL}pledges/`,
           {
             method: "post",
             headers: {
               "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`,
             },
-            body: JSON.stringify(pledge),
+            body: JSON.stringify({
+              amount: parseInt(pledge.amount),
+              comment: pledge.comment,
+              anonymous: true,
+              project_id: parseInt(id),
+            }),
           }
         );
         const data = await response.json();
-        window.localStorage.setItem("token", data.token);
+        console.log(data);
         // THIS IS HOW YOU NAVIGATE AUTOMATICALLY
         navigate("/");
       } catch (err) {
