@@ -32,7 +32,7 @@ function PledgeForm(pledgeData) {
             method: "post",
             headers: {
               "Content-Type": "application/json",
-              Authorization: `Bearer ${token}`,
+              Authorization: `Token ${token}`,
             },
             body: JSON.stringify({
               amount: parseInt(pledge.amount),
