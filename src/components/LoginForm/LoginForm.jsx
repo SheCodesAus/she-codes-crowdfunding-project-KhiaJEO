@@ -59,6 +59,11 @@ function LoginForm() {
   //       );
   //       const data = await response.json();
   //       window.localStorage.setItem("token", data.token);
+
+  // From Alex's session to store username in local storage to pledge to a project
+  // This is not recommended because it will be easy to hack this info
+  //    window.localStorage.setItem("username", credentials.username);
+
   //     } catch (err) {
   //       console.log(err);
   //     }

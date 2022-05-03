@@ -1,0 +1,56 @@
+.nav_wrapper {
+  opacity: 60%;
+  box-shadow: 0 0 8px white inset;
+}
+
+header {
+  text-align: center;
+}
+
+form {
+  margin: 50px auto;
+  width: 60%;
+}
+
+.form-item {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 5px;
+}
+
+.form-item label {
+  flex-basis: 150px;
+  font-size: 17px;
+  color: steelblue;
+}
+
+.form-item input,
+.form-item textarea {
+  flex-basis: 70%;
+  border: 1px solid lightsteelblue;
+}
+
+.form-item input:hover,
+.form-item textarea:hover {
+  border: 2px solid steelblue;
+}
+
+.form-item input,
+.form-item textarea,
+.form-item button {
+  border: px solid lightsteelblue;
+  padding: 5px;
+  font-size: 18px;
+}
+
+.form-item button:hover {
+  border: 1px solid steelblue;
+  color: steelblue;
+  font-weight: 300;
+}
+
+.form-item button {
+  width: 100px;
+  height: 40px;
+}

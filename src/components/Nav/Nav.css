@@ -1,0 +1,45 @@
+/* Navigation Styles */
+.Nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 36px;
+}
+
+/* .left-side {
+  display: flex;
+}
+
+.nav-wrapper > .left-side > div {
+  margin-right: 20px;
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+
+.nav-link-wrapper {
+  height: 22px;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a {
+  color: #8a8a8a;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover {
+  border-bottom: 1px solid black;
+}
+
+.nav-link-wrapper a:hover {
+  color: black;
+}
+
+.active-nav-link {
+  border-bottom: 1px solid black;
+}
+
+/* using the !important rule will override all previous styling rules (this is for when you click on the link and it stays black and bold */
+.active-nav-link a {
+  color: black !important;
+} */

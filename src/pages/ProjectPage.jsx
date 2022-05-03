@@ -64,6 +64,8 @@ function ProjectPage() {
           );
         })}
       </ul>
+      {/* <PledgeForm projectId={id} />*/}
+      {/* This is referring to the pledge form project id to ensure that it will show on the project page */}
     </div>
   );
 }
