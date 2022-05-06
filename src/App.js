@@ -30,3 +30,22 @@ function App() {
 }
 
 export default App;
+
+// From thinkific/class session
+// function App() {
+//   return (
+//     <Router>
+//       <div>
+//         <Nav />
+//         <Routes>
+//           <Route path="/" element={<HomePage />} />
+//           <Route path="/login" element={<LoginPage />} />
+//           <Route path="/project/:id" element={<ProjectPage />} />
+//           <Route path="/pledges/:id" element={<ProjectPledgesPage />} />
+//         </Routes>
+//       </div>
+//     </Router>
+//   );
+// }
+
+// export default App;
