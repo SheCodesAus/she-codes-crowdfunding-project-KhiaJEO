@@ -38,7 +38,7 @@ function LoginForm() {
     e.preventDefault();
     if (credentials.username && credentials.password) {
       postData().then((response) => {
-        window.localStorage.setItem("token", response.token);
+        // window.localStorage.setItem("token", response.token);
         navigate("/");
       });
     }
