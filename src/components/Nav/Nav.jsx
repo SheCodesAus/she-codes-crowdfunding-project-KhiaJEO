@@ -10,29 +10,52 @@ function Nav() {
   const [button, setButton] = useState(true);
 
   const handleClick = () => setClick(!click);
+
   return (
-    <>
-      <nav className="nav">
-        <div className="nav-container">
-          <Link to="/" className="nav-logo">
-            SEAVA
-          </Link>
-          <li className="nav-item">
-            <Link to="/puns" className="nav-links">
-              Projects
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/" className="nav-links">
-              Puns
-            </Link>
-          </li>
-          {button && <Button buttonStyle="btn--outline">Login</Button>}
-        </div>
+    <section className="navbar">
+      <nav className="left-menu">
+        <Link className="button" variantcolor="#dcedc9" to="/">
+          Home{" "}
+        </Link>
+        <Link className="button" to="/projects/">
+          Projects{" "}
+        </Link>
       </nav>
-    </>
+      <nav className="right-menu">
+        <Link className="button" to="/puns/">
+          Puns{" "}
+        </Link>
+        <Link className="button" to="/login/">
+          Login{" "}
+        </Link>
+      </nav>
+    </section>
   );
 }
+
+// return (
+//     <>
+//       <nav className="nav">
+//         <div className="nav-container">
+//           <Link to="/" className="nav-logo">
+//             SEAVA
+//           </Link>
+//           <li className="nav-item">
+//             <Link to="/puns" className="nav-links">
+//               Projects
+//             </Link>
+//           </li>
+//           <li className="nav-item">
+//             <Link to="/" className="nav-links">
+//               Puns
+//             </Link>
+//           </li>
+//           {button && <Button buttonStyle="btn--outline">Login</Button>}
+//         </div>
+//       </nav>
+//     </>
+//   );
+// }
 
 export default Nav;
 

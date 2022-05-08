@@ -1,0 +1,9 @@
+.puns-textbox {
+  display: flex;
+  justify-content: space-between;
+  font: var(--font-primary);
+  font-weight: var(--regular);
+  font-size: 14px;
+  background-color: var(--color-secondary);
+  padding: 10px;
+}

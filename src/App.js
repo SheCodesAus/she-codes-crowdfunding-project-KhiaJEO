@@ -9,6 +9,7 @@ import HomePage from "./pages/HomePage";
 import ProjectPage from "./pages/ProjectPage";
 import LoginPage from "./pages/LoginPage";
 import ProjectPledgesPage from "./pages/ProjectPledgesPage";
+import PunsPage from "./pages/PunsPage";
 
 // Styles
 import "./App.css";
@@ -23,6 +24,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/project/:id" element={<ProjectPage />} />
           <Route path="/pledges/:id" element={<ProjectPledgesPage />} />
+          <Route path="/puns/" element={<PunsPage />} />
         </Routes>
       </div>
     </Router>
