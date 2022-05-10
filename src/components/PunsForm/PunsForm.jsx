@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 // Imports
 import { useNavigate } from "react-router-dom";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
 function PunsForm(punsData) {
   // State
