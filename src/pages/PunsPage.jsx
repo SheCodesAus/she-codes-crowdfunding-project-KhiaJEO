@@ -1,29 +1,29 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 // import { Link } from "react-router-dom";
 
 // Data
 
 // Components
-import PunsForm from "../components/PunsForm/PunsForm";
+import "../components/PunsForm/PunsForm";
 
 function PunsPage() {
   // State
-  const [punsData, setPunsData] = useState();
+  const [punsData, setPunsData] = useState([]);
 
   // Hooks
-  const { id } = useParams();
+  // const { id } = useParams();
 
   // Action & Helpers
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}puns/${id}`)
+    fetch(`${process.env.REACT_APP_API_URL}puns/`)
       .then((results) => {
         return results.json();
       })
       .then((data) => {
         setPunsData(data);
       });
-  }, [id]);
+  }, []);
 
   //   Loading State
   if (!punsData) {
@@ -31,15 +31,22 @@ function PunsPage() {
   }
 
   return (
-    <div>
-      <h2>{punsData.title}</h2>
-      <h3>Posted on: {punsData.date_created}</h3>
-      <h3>
-        {/* Do I need to create a punauthor page? This will be the user who is logged in - or is it just "user" */}
-        {/* Created by: <ProjectOwner owner={projectData.owner} /> */}
-      </h3>
+    <div className="puns-wrapper">
+      <h1> Write your own sea pun </h1>
+      <div className="puns-post-wrapper">
+        {punsData.map((punsData, key) => {
+          return <PunsPage key={`puns-${punsData.id}`} punsData={punsData} />;
+        })}
+        {/* // <h2>{punsData.post}</h2>
+        // <h2>Posted on: {punsData.date_posted}</h2> */}
+      </div>
     </div>
   );
 }
 
 export default PunsPage;
+
+{
+  /* Do I need to create a punauthor page? This will be the user who is logged in - or is it just "user" 
+Created by: <ProjectOwner owner={projectData.owner} />   */
+}

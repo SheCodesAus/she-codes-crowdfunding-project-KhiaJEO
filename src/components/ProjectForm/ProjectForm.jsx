@@ -57,7 +57,7 @@ function ProjectForm(projectData) {
             date_created: new Date(project.date_created).toISOString(),
             issue: project.issue,
             tools: project.tools,
-            science: porject.science,
+            science: project.science,
             closing_date: new Date(project.closing_date).toISOString(),
           }),
         });

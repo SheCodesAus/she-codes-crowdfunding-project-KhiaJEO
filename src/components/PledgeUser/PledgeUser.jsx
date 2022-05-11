@@ -1,32 +1,32 @@
-// Converting the number to the name of the pledger
+// // Converting the number to the name of the pledger
 
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 
-function PledgeUser({ amount, supporter, comment }) {
-  // State
-  const [supporterData, setSupporterData] = useState();
+// function PledgeUser({ amount, supporter, comment }) {
+//   // State
+//   const [supporterData, setSupporterData] = useState();
 
-  // Actions & Helpers
-  useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}users/${supporter}`)
-      .then((results) => {
-        return results.json();
-      })
-      .then((data) => {
-        setSupporterData(data);
-      });
-  }, [supporter]);
+//   // Actions & Helpers
+//   useEffect(() => {
+//     fetch(`${process.env.REACT_APP_API_URL}users/${supporter}`)
+//       .then((results) => {
+//         return results.json();
+//       })
+//       .then((data) => {
+//         setSupporterData(data);
+//       });
+//   }, [supporter]);
 
-  if (!supporterData) {
-    return null;
-  }
-  //   Normal State
-  return (
-    <li>
-      ${amount} from {supporterData.username}
-      <br></br>"{comment}"
-    </li>
-  );
-}
+//   if (!supporterData) {
+//     return null;
+//   }
+//   //   Normal State
+//   return (
+//     <li>
+//       ${amount} from {supporterData.username}
+//       <br></br>"{comment}"
+//     </li>
+//   );
+// }
 
-export default PledgeUser;
+// export default PledgeUser;
