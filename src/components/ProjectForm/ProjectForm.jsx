@@ -11,12 +11,12 @@ function ProjectForm(projectData) {
   const [project, postProject] = useState(projectData.map);
 
   // Hooks
-  const naviagte = useNavigate();
+  const navigate = useNavigate();
 
   // Action and Helpers
   const handleChange = (event) => {
     const { id, value } = event.target;
-    postProjet((prevProjectData) => ({
+    postProject((prevProjectData) => ({
       ...prevProjectData,
       [id]: value,
     }));
@@ -64,7 +64,7 @@ function ProjectForm(projectData) {
         const data = await response.json();
         console.log(data);
         // THIS IS HOW YOU NAVIGATE AUTOMATICALLY
-        Navigate(`/projects/${data.id}`);
+        navigate(`/projects/${data.id}`);
       } catch (err) {
         console.log(err);
       }
