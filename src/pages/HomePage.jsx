@@ -25,17 +25,9 @@ function HomePage() {
 
   return (
     <div className="home-wrapper">
-      <h1 className="home-welcome"> Welcome to SEAVA </h1>
+      <h1 className="home-welcome"> SEAVA </h1>
       <p className="website-detail">
-        {" "}
-        SEAVA is a crowdfunding site is to create projects that support research
-        and work in the marine sciences. Marine ecosystems are highly important
-        and without healthy marine life the human race will be no more. A user
-        can create a project and profile and they can also pledge hypothetical
-        money towards a project that they believe is a good cause. There will
-        also be a puns page where a user can post sea and marine related puns
-        anonymously to bring light and joy into a topic that can easily become
-        existential and overwhelming.{" "}
+        <br></br>Donate towards a project to protect your marine life{" "}
       </p>
 
       <div id="project-list">

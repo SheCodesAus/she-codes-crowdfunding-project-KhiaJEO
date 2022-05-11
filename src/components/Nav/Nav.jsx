@@ -14,17 +14,17 @@ function Nav() {
   return (
     <section className="navbar">
       <nav className="left-menu">
-        <Link className="button" variantcolor="#dcedc9" to="/">
-          Home{" "}
+        <Link className="button" to="/">
+          SEAVA{" "}
         </Link>
         <Link className="button" to="/projects/">
           Projects{" "}
         </Link>
-      </nav>
-      <nav className="right-menu">
         <Link className="button" to="/puns/">
           Puns{" "}
         </Link>
+      </nav>
+      <nav className="right-menu">
         <Link className="button" to="/login/">
           Login{" "}
         </Link>
