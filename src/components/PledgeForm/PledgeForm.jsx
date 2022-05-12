@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 // Imports
 // import { useNavigate } from "react-router-dom";
-// import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./PledgeForm.css";
 
@@ -20,7 +20,7 @@ function PledgeForm({ projectId }) {
   });
 
   // // Hooks
-  // const { id } = useParams();
+  const { id } = useParams();
   // const navigate = useNavigate();
 
   // Actions & Helpers
@@ -49,16 +49,12 @@ function PledgeForm({ projectId }) {
             headers: {
               "Content-Type": "application/json",
               Authorization: `Token ${token}`,
-              // Authorization: `Bearer ${token}`,
             },
             body: JSON.stringify({
-              project_id: projectId,
-              amount: pledge.amount,
-              supporter: window.localStorage.getItem("username"),
+              project_id: parseInt(id),
+              amount: parseInt(pledge.amount),
               comment: pledge.comment,
-              anonymous: pledge.anonymous,
-              // anonymous: pledge.true
-              // I'm not sure exactly what this does and why it is different??
+              anonymous: pledge.anonymous === "true",
             }),
           }
         );

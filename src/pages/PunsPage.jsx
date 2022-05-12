@@ -35,18 +35,13 @@ function PunsPage() {
       <h1> Write your own sea pun </h1>
       <div className="puns-post-wrapper">
         {punsData.map((punsData, key) => {
-          return <PunsPage key={`puns-${punsData.id}`} punsData={punsData} />;
+          return <p key={`puns-${punsData.id}`}>{punsData.post}</p>;
         })}
-        {/* // <h2>{punsData.post}</h2>
-        // <h2>Posted on: {punsData.date_posted}</h2> */}
       </div>
+      <p>Insert pun form</p>
+      {/* call pun form */}
     </div>
   );
 }
 
 export default PunsPage;
-
-{
-  /* Do I need to create a punauthor page? This will be the user who is logged in - or is it just "user" 
-Created by: <ProjectOwner owner={projectData.owner} />   */
-}

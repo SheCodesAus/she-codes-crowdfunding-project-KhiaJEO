@@ -37,8 +37,9 @@ function LoginForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (credentials.username && credentials.password) {
-      postData().then((response) => {
-        // window.localStorage.setItem("token", response.token);
+      postData().then(async (response) => {
+        console.log(response.token);
+        window.localStorage.setItem("token", response.token);
         navigate("/");
       });
     }
