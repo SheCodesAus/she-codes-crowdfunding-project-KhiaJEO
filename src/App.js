@@ -7,6 +7,7 @@ import Nav from "./components/Nav/Nav";
 // Pages
 import HomePage from "./pages/HomePage";
 import ProjectPage from "./pages/ProjectPage";
+import ProjectFormPage from "./pages/ProjectFormPage";
 import LoginPage from "./pages/LoginPage";
 import ProjectPledgesPage from "./pages/ProjectPledgesPage";
 import PunsPage from "./pages/PunsPage";
@@ -23,6 +24,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/project/:id" element={<ProjectPage />} />
+          <Route path="/project/create" element={<ProjectFormPage />} />
           <Route path="/pledges/:id" element={<ProjectPledgesPage />} />
           <Route path="/puns/" element={<PunsPage />} />
         </Routes>

@@ -8,20 +8,22 @@
   padding: 10px;
 }
 
-:any-link {
+/* :any-link {
   font: var(--regular);
-}
+} */
 
 .left-menu {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  font-family: "Archivo", sans-serif;
 }
 
 .right-menu {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  font-family: "Archivo", sans-serif;
 }
 
 .button {

@@ -51,7 +51,6 @@ function ProjectPage() {
         })}
       </ul>
       <Link to={`/pledges/${id}`}>Donate</Link>
-      <h3>Donations:</h3>
 
       {/* <PledgeForm projectId={id} />*/}
       {/* This is referring to the pledge form project id to ensure that it will show on the project page */}

@@ -24,7 +24,7 @@ function PunsForm(punsData) {
   };
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
+    // event.preventDefault();
 
     const token = window.localStorage.getItem("token");
     console.log("handleSubmit", puns, token);
@@ -47,7 +47,7 @@ function PunsForm(punsData) {
         console.log(data);
 
         // THIS IS HOW YOU NAVIGATE AUTOMATICALLY
-        navigate(`/puns/${data.id}}`);
+        navigate(`/puns/`);
       } catch (err) {
         console.log(err);
       }
@@ -57,34 +57,39 @@ function PunsForm(punsData) {
   const punsField = [
     {
       id: "post",
-      label: "Post",
-      placeholder: "Write your pun",
+      label: "",
+      placeholder: "--write your pun here--",
       type: "text",
     },
-    {
-      id: "date_posted",
-      label: "Date posted",
-      placeholder: "Date posted",
-      type: "date",
-    },
+    // {
+    //   id: "date_posted",
+    //   label: "",
+    //   placeholder: "Date posted",
+    //   type: "date",
+    // },
   ];
 
   return (
     <form className="puns-form">
-      <h3> Write a sea pun </h3>
+      <h3> ... </h3>
       {punsField.map((field, key) => {
         return (
           <div className="row" key={`$key}-$(field.id}`}>
-            <label htmlFor={field.id}>{field.label}</label>
-            <input
-              type={field.type}
-              id={field.id}
-              placeholder={field.placeholder}
-              onChange={handleChange}
-            />
+            <div className="post-label">
+              <label htmlFor={field.id}>{field.label}</label>
+            </div>
+            <div className="post-input">
+              <input
+                type={field.type}
+                id={field.id}
+                placeholder={field.placeholder}
+                onChange={handleChange}
+              />
+            </div>
           </div>
         );
       })}
+
       <button className="primary-button" type="submit" onClick={handleSubmit}>
         Post Pun
       </button>

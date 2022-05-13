@@ -17,8 +17,8 @@ function Nav() {
         <Link className="button" to="/">
           SEAVA{" "}
         </Link>
-        <Link className="button" to="/projects/">
-          Projects{" "}
+        <Link className="button" to="/project/create/">
+          Create Project{" "}
         </Link>
         <Link className="button" to="/puns/">
           Puns{" "}

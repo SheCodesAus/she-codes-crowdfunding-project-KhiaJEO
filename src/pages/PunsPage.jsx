@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 // Data
 
 // Components
-import "../components/PunsForm/PunsForm";
+import PunsForm from "../components/PunsForm/PunsForm";
 
 function PunsPage() {
   // State
@@ -33,13 +33,16 @@ function PunsPage() {
   return (
     <div className="puns-wrapper">
       <h1> Write your own sea pun </h1>
+      <div className="punsform-page-wrapper">
+        <div id="punsform">
+          <PunsForm />
+        </div>
+      </div>
       <div className="puns-post-wrapper">
         {punsData.map((punsData, key) => {
           return <p key={`puns-${punsData.id}`}>{punsData.post}</p>;
         })}
       </div>
-      <p>Insert pun form</p>
-      {/* call pun form */}
     </div>
   );
 }

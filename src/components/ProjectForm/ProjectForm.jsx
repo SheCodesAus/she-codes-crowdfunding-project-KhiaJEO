@@ -48,7 +48,7 @@ function ProjectForm(projectData) {
             "Content-Type": "application/json",
             Authorization: `Token ${token}`,
           },
-          body: JSON.stringyfy({
+          body: JSON.stringify({
             title: project.title,
             summary: project.summary,
             goal: parseInt(project.goal),
@@ -64,7 +64,7 @@ function ProjectForm(projectData) {
         const data = await response.json();
         console.log(data);
         // THIS IS HOW YOU NAVIGATE AUTOMATICALLY
-        navigate(`/projects/${data.id}`);
+        navigate(`/project/${data.id}`);
       } catch (err) {
         console.log(err);
       }
@@ -73,61 +73,61 @@ function ProjectForm(projectData) {
   const formSections = [
     {
       id: "title",
-      label: "Title",
+      label: "Title:",
       placeholder: "Project title",
       type: "text",
     },
     {
       id: "summary",
-      label: "Summary",
+      label: "Summary:",
       placeholder: "Project summary",
       type: "text",
     },
     {
       id: "goal",
-      label: "Gaol",
+      label: "Goal: $",
       placeholder: "Project goal amount",
       type: "number",
     },
     {
       id: "image",
-      label: "Image",
+      label: "Image:",
       placeholder: "Include Image",
       type: "url",
     },
     {
       id: "is_open",
-      label: "Title",
+      label: "Is this project open for donations?",
       placeholder: "Select if project is open",
       type: "checkbox",
     },
     {
       id: "date_created",
-      label: "Date Created",
+      label: "Date Created:",
       placeholder: "Date created",
       type: "date",
     },
     {
       id: "issue",
-      label: "Issue",
+      label: "The issue:",
       placeholder: "What is the issue at hand",
       type: "text",
     },
     {
       id: "tools",
-      label: "Tools",
+      label: "The tools:",
       placeholder: "What tools do you need?",
       type: "text",
     },
     {
       id: "science",
-      label: "Science",
+      label: "The science:",
       placeholder: "What is the science",
       type: "text",
     },
     {
       id: "closing_date",
-      label: "Project Closing Date",
+      label: "Project Closing Date:",
       placeholder: "Closing date",
       type: "date",
     },
