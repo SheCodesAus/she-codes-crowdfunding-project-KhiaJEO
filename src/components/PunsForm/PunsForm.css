@@ -28,7 +28,7 @@
 .primary-button {
   background-color: #c5e1a5;
   height: 1cm;
-  border: none;
+  border: solid thin;
   font-weight: 500;
   font-size: 10pt;
   text-transform: uppercase;
