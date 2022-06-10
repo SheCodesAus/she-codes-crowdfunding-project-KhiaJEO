@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 // Components
 import UserDetail from "../components/UserDetail/UserDetail";
+import PledgerDetail from "../components/PledgerDetail/PledgerDetail";
 
 function ProjectPage() {
   // State
@@ -30,22 +31,48 @@ function ProjectPage() {
   if (!projectData) {
     return <h3>Loading project...</h3>;
   }
-
+  // Call the image, summary, issues, tools, science etc in here
   return (
-    <div>
-      <h2>{projectData.title}</h2>
-      <h3>Created at: {projectData.date_created}</h3>
-      <h3>
-        Created by: <UserDetail userId={projectData.owner} />
-      </h3>
-      <h3>{`Status: ${projectData.is_open}`}</h3>
+    <div className="projectpage-wrapper">
+      <div className="project-section-title">
+        <h2>{projectData.title}</h2>
+      </div>
+      <div className="projectpage-img">
+        <img src={projectData.image}></img>
+      </div>
+      <div className="project-section-title">
+        <h3>
+          Project made by <UserDetail owner={projectData.owner} />
+        </h3>
+      </div>
+      <h4>Posted on {projectData.date_created}</h4>
+      <div className="project-section-title">
+        <h3>
+          The Issue <br></br>
+        </h3>
+      </div>
+      <h3>{projectData.issue}</h3>
+      <div className="project-section-title">
+        <h3>
+          The Tools <br></br>
+        </h3>
+      </div>
+      <h3>{projectData.tools}</h3>
+      <div className="project-section-title">
+        <h3>
+          The Science <br></br>
+        </h3>
+      </div>
+      <h3>{projectData.science}</h3>
+
+      <h4>{`Status: ${projectData.is_open}`}</h4>
       <h3>Pledges:</h3>
       <ul>
         {projectData.pledges.map((pledgeData, key) => {
           return (
             <li>
-              {pledgeData.amount} from{" "}
-              <UserDetail userId={pledgeData.supporter} />
+              ${pledgeData.amount} from{" "}
+              <PledgerDetail supporter={pledgeData.supporter} />
             </li>
           );
         })}

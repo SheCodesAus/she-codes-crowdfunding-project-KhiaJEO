@@ -1,26 +1,8 @@
-.home-wrapper {
-  display: flex;
-  align-items: center;
-  padding: 30px;
-  border: 1px solid;
-}
-
-.home-welcome {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-}
-
-.website-detail {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 10px;
-  flex-direction: column;
-}
-
 #project-list {
   display: grid;
   grid-template-columns: 30% 30% 30%;
-  column-gap: 10px;
+  column-gap: 50px;
   row-gap: 10px;
+  margin: 50px;
+  padding: 60px;
 }

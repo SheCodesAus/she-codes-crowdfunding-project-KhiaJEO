@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // Imports
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 // Styles
 import "./ProjectForm.css";
@@ -42,25 +42,28 @@ function ProjectForm(projectData) {
       project.closing_date
     )
       try {
-        const response = await fetch(`${process.env.RE_APP_API_URL}projects/`, {
-          method: "post",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Token ${token}`,
-          },
-          body: JSON.stringify({
-            title: project.title,
-            summary: project.summary,
-            goal: parseInt(project.goal),
-            image: project.image,
-            is_open: project.is_open,
-            date_created: new Date(project.date_created).toISOString(),
-            issue: project.issue,
-            tools: project.tools,
-            science: project.science,
-            closing_date: new Date(project.closing_date).toISOString(),
-          }),
-        });
+        const response = await fetch(
+          `${process.env.REACT_APP_API_URL}projects/`,
+          {
+            method: "post",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Token ${token}`,
+            },
+            body: JSON.stringify({
+              title: project.title,
+              summary: project.summary,
+              goal: parseInt(project.goal),
+              image: project.image,
+              is_open: project.is_open === "on",
+              date_created: new Date(project.date_created).toISOString(),
+              issue: project.issue,
+              tools: project.tools,
+              science: project.science,
+              closing_date: new Date(project.closing_date).toISOString(),
+            }),
+          }
+        );
         const data = await response.json();
         console.log(data);
         // THIS IS HOW YOU NAVIGATE AUTOMATICALLY
@@ -87,7 +90,7 @@ function ProjectForm(projectData) {
       id: "goal",
       label: "Goal: $",
       placeholder: "Project goal amount",
-      type: "number",
+      type: "text",
     },
     {
       id: "image",
@@ -134,25 +137,32 @@ function ProjectForm(projectData) {
   ];
 
   return (
-    <form className="ProjectForm">
-      <h3> Create a project</h3>
-      {formSections.map((section, key) => {
-        return (
-          <div className="row" key={`$key}-${section.id}`}>
-            <label htmlFor={section.id}>{section.label}</label>
-            <input
-              type={section.type}
-              id={section.id}
-              placeholder={section.placeholder}
-              onChange={handleChange}
-            />
-          </div>
-        );
-      })}
-      <button className="primary-button" type="submit" onClick={handleSubmit}>
-        Create Project
-      </button>
-    </form>
+    <div className="form-wrapper">
+      <form>
+        {formSections.map((section, key) => {
+          return (
+            <div className="form-section">
+              <div className="form-label">
+                <div key={`${key}-${section.id}`}>
+                  <label htmlFor={section.id}>{section.label}</label>
+                </div>
+                <div className="form-input">
+                  <input
+                    type={section.type}
+                    id={section.id}
+                    placeholder={section.placeholder}
+                    onChange={handleChange}
+                  />
+                </div>
+              </div>
+            </div>
+          );
+        })}
+        <button className="primary-button" type="submit" onClick={handleSubmit}>
+          Create Project
+        </button>
+      </form>
+    </div>
   );
 }
 

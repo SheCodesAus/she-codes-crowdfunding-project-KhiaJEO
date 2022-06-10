@@ -26,12 +26,21 @@
 }
 
 .primary-button {
-  background-color: #c5e1a5;
-  height: 1cm;
-  border: solid thin;
+  background-color: #6f0000;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+  outline: 0;
+  border: none;
   font-weight: 500;
   font-size: 10pt;
   text-transform: uppercase;
+}
+
+.primary-button:hover {
+  background-color: #5c1010;
+  transition-duration: ease background-color 250ms;
+  cursor: pointer;
 }
 
 .puns-post-wrapper {

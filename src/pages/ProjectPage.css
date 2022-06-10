@@ -1,0 +1,12 @@
+.projectpage-img {
+  justify-content: center;
+  max-height: 50%;
+  max-width: 50%;
+}
+
+.projectpage-wrapper {
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+  justify-items: center;
+  align-self: center;
+}

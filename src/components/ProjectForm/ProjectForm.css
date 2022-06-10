@@ -1,1 +1,18 @@
-/*  */
+.form-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+}
+
+.form-section {
+  padding: 15px 15px;
+}
+
+.form-label {
+  justify-content: center;
+}
+
+.form-input {
+  padding: 10px;
+  justify-content: center;
+}

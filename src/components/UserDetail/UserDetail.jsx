@@ -1,21 +1,21 @@
-// Converting the number to the name of the pledger
+// Converting the number to the name of the owner of the project
 
 import React, { useState, useEffect } from "react";
 
-function UserDetail({ userId }) {
+function UserDetail({ owner }) {
   // State
   const [userData, setuserData] = useState();
 
   // Actions & Helpers
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}users/${userId}`)
+    fetch(`${process.env.REACT_APP_API_URL}users/${owner}`)
       .then((results) => {
         return results.json();
       })
       .then((data) => {
         setuserData(data);
       });
-  }, []);
+  }, [owner]);
 
   if (!userData) {
     return null;
