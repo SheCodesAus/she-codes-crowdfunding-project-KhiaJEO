@@ -12,7 +12,6 @@ function ProjectCard({ projectData }) {
       <div className="projectcard-image">
         <Link to={`/projects/${projectData.id}`}>
           <img src={projectData.image} alt="the project" />
-
           <div className="projectcard-title">
             <h3>{projectData.title}</h3>
           </div>

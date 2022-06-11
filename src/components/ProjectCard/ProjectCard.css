@@ -10,14 +10,17 @@ body {
   text-align: center;
   font-weight: lighter;
   margin: 5px;
+  background-color: rgba(223, 223, 223, 0.5);
+  border-radius: 5%;
 }
 
 .project-card img {
   width: 95%;
   height: 300px;
+
   backdrop-filter: blur(25px);
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 10%;
   box-shadow: 0px 2px 2px grey;
 }
 .project-card img:hover {
@@ -33,7 +36,6 @@ body {
 .projectcard-summary {
   font-size: smaller;
   font-weight: lighter;
-  backdrop-filter: blur(15px);
   border-radius: 20%;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Work Sans", sans-serif;
 }

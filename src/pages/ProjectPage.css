@@ -1,12 +1,70 @@
-.projectpage-img {
-  justify-content: center;
-  max-height: 50%;
-  max-width: 50%;
+.projectpage-wrapper {
+  margin: 30px;
+  background-color: rgba(223, 223, 223, 0.5);
+  border-radius: 5%;
 }
 
-.projectpage-wrapper {
-  grid-row: 3 / 4;
-  grid-column: 1 / 2;
-  justify-items: center;
-  align-self: center;
+.project-section-title {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  font-display: uppercase;
+  font-family: "Archivo", sans-serif;
+}
+
+.project-section-summary {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+  font-family: "Work Sans", sans-serif;
+}
+
+.projectpage-wrapper img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10%;
+  margin: 50px;
+  padding: 5px;
+}
+
+.projectpage-img {
+  display: flex;
+  justify-content: center;
+  height: 40rem;
+}
+
+.project-section-date-created {
+  display: flex;
+  justify-content: center;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.project-section-input {
+  display: flex;
+  margin: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding-left: 70px;
+  padding-right: 70px;
+  font-family: "Work Sans", sans-serif;
+}
+
+.status {
+  display: flex;
+  padding-left: 30px;
+}
+
+.pledges {
+  display: flex;
+  padding-left: 30px;
+}
+
+.pledge-link {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5px;
+  font-size: larger;
+  font-style: uppercase;
 }
