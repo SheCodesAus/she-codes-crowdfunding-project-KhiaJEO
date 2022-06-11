@@ -1,14 +1,12 @@
-.home-wrapper {
+/* .home-wrapper {
   display: flex;
   align-items: center;
   padding: 30px;
-  border: 1px solid;
 }
 
 .home-welcome {
   display: flex;
   flex-direction: row;
-  align-items: center;
   padding: 10px;
   align-items: center;
 }
@@ -16,6 +14,22 @@
 .website-detail {
   display: flex;
   flex-wrap: wrap;
+  margin-right: 30px;
   padding: 10px;
   flex-direction: column;
+} */
+
+.home-welcome {
+  display: flex;
+  font-size: xxx-large;
+  color: ghostwhite;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  justify-content: center;
+}
+
+.website-detail {
+  display: flex;
+  justify-content: center;
+  font-weight: lighter;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

@@ -8,6 +8,7 @@ function ProjectFormPage() {
     <div className="projectform-page-wrapper">
       <div id="project-form">
         <h1>Create a new project</h1>
+
         <ProjectForm />
       </div>
     </div>

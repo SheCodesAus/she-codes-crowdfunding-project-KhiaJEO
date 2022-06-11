@@ -7,14 +7,20 @@ import "./ProjectCard.css";
 function ProjectCard({ projectData }) {
   return (
     <div className="project-card">
-      <div className="projectcard-title">
-        <Link to={`/project/${projectData.id}`}></Link>
-      </div>
+      <Link to={`/project/${projectData.id}`}></Link>
+
       <div className="projectcard-image">
         <Link to={`/projects/${projectData.id}`}>
           <img src={projectData.image} alt="the project" />
-          <h3>{projectData.title}</h3>
+
+          <div className="projectcard-title">
+            <h3>{projectData.title}</h3>
+          </div>
         </Link>
+
+        <div className="projectcard-summary">
+          <h4>{projectData.summary}</h4>
+        </div>
       </div>
     </div>
   );

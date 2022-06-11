@@ -67,7 +67,7 @@ function ProjectForm(projectData) {
         const data = await response.json();
         console.log(data);
         // THIS IS HOW YOU NAVIGATE AUTOMATICALLY
-        navigate(`/project/${data.id}`);
+        navigate(`/projects/${data.id}`);
       } catch (err) {
         console.log(err);
       }
@@ -83,19 +83,19 @@ function ProjectForm(projectData) {
     {
       id: "summary",
       label: "Summary:",
-      placeholder: "Project summary",
+      placeholder: "Summarize your project",
       type: "text",
     },
     {
       id: "goal",
       label: "Goal: $",
-      placeholder: "Project goal amount",
+      placeholder: "Enter the goal amount",
       type: "text",
     },
     {
       id: "image",
       label: "Image:",
-      placeholder: "Include Image",
+      placeholder: "Add image URL",
       type: "url",
     },
     {
@@ -113,7 +113,7 @@ function ProjectForm(projectData) {
     {
       id: "issue",
       label: "The issue:",
-      placeholder: "What is the issue at hand",
+      placeholder: "Describe the issue",
       type: "text",
     },
     {
@@ -125,7 +125,7 @@ function ProjectForm(projectData) {
     {
       id: "science",
       label: "The science:",
-      placeholder: "What is the science",
+      placeholder: "What is the science?",
       type: "text",
     },
     {

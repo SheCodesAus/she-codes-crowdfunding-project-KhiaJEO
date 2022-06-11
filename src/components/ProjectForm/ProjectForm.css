@@ -5,14 +5,35 @@
 }
 
 .form-section {
+  display: flex;
+  align-content: center;
+  justify-content: flex-start;
   padding: 15px 15px;
 }
 
 .form-label {
   justify-content: center;
+  align-items: center;
 }
 
-.form-input {
+.form-input input {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  /* background: transparent; */
+  /* background: rgba(255, 255, 255, 0.2); */
   padding: 10px;
   justify-content: center;
+}
+
+.form-input input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 0.5px solid dimgray;
+}
+
+.form-input input:hover {
+  border-bottom: 0.5px solid dimgray;
+  transition: 0.5s all ease-in-out;
 }

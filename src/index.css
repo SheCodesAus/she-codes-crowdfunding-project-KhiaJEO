@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  background-image: url(../src/pages/shellone.jpg);
+  background-image: url(../src/pages/crab-1.jpg);
+  background-size: cover;
 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",

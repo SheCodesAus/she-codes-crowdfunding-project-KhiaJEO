@@ -1,8 +1,8 @@
 #project-list {
   display: grid;
   grid-template-columns: 30% 30% 30%;
-  column-gap: 50px;
+  column-gap: 20px;
   row-gap: 10px;
-  margin: 50px;
-  padding: 60px;
+  margin: 30px;
+  padding: 10px;
 }
