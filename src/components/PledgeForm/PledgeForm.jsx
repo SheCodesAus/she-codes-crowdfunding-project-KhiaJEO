@@ -72,18 +72,13 @@ function PledgeForm({ projectId }) {
     return <Link to="/login">Please login to donate to this project :D</Link>;
   }
 
-  // from Alex's session
-  // if (!token) {
-  //   return (
-  //     <Link to ="/login"> Please login to pledge to this amazing project</Link>
-  //   );
-  // }
-
   return (
-    <div className="form_wrapper">
+    <div className="pledgeform_wrapper">
       <form>
-        <div className="amount-section">
+        <div className="pledge-label">
           <label htmlFor="amount">Amount: $</label>
+        </div>
+        <div className="pledge-input">
           <input
             type="number"
             id="amount"
@@ -91,16 +86,22 @@ function PledgeForm({ projectId }) {
             onChange={handleChange}
           />
         </div>
-        <div className="anonymous-section">
+
+        <div className="pledge-label">
           <label htmlFor="anonymous">Anonymous:</label>
+        </div>
+        <div className="pledge-input">
           <select id="anonymous" onChange={handleChange}>
             <option value="">--Please select an option--</option>
             <option value={true}>True</option>
             <option value={false}>False</option>
           </select>
         </div>
-        <div className="comment-section">
+
+        <div className="pledge-label">
           <label htmlFor="comment">Share a Comment:</label>
+        </div>
+        <div className="pledge-input">
           <input
             type="text"
             id="comment"
@@ -108,9 +109,15 @@ function PledgeForm({ projectId }) {
             onChange={handleChange}
           />
         </div>
-        <button type="submit" onClick={handleSubmit}>
-          Pledge Amount
-        </button>
+        <div className="pledge-button">
+          <button
+            className="primary-button"
+            type="submit"
+            onClick={handleSubmit}
+          >
+            Pledge
+          </button>
+        </div>
       </form>
     </div>
   );

@@ -39,9 +39,11 @@ function PunsPage() {
         </div>
       </div>
       <div className="puns-post-wrapper">
-        {punsData.map((punsData, key) => {
-          return <p key={`puns-${punsData.id}`}>{punsData.post}</p>;
-        })}
+        <div className="posted-pun">
+          {punsData.map((punsData, key) => {
+            return <p key={`puns-${punsData.id}`}>{punsData.post}</p>;
+          })}
+        </div>
       </div>
     </div>
   );

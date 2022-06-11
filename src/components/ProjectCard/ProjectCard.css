@@ -10,7 +10,7 @@ body {
   text-align: center;
   font-weight: lighter;
   margin: 5px;
-  /* background-color: rgba(223, 223, 223, 0.5); */
+  background-color: rgba(223, 223, 223, 0.5);
   border-radius: 5%;
 }
 

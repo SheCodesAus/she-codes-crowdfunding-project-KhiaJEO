@@ -1,4 +1,55 @@
-.nav_wrapper {
+.pledgeform-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+}
+
+.pledge-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: bolder;
+}
+
+.pledge-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: bolder;
+}
+
+.pledge-input input {
+  display: flex;
+  align-items: center;
+  background: none;
+  padding: 10px;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.pledge-input input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 0.5px solid dimgray;
+}
+
+.pledge-input input:hover {
+  border-bottom: 0.5px solid dimgray;
+  transition: 0.5s all ease-in-out;
+}
+
+.pledge-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* .nav_wrapper {
   opacity: 60%;
   box-shadow: 0 0 8px white inset;
 }
@@ -53,4 +104,4 @@ form {
 .form-item button {
   width: 100px;
   height: 40px;
-}
+} */

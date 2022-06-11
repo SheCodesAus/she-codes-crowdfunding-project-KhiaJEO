@@ -97,15 +97,4 @@ function PunsForm(punsData) {
   );
 }
 
-/* <input
-          type="text"
-          id="text"
-          placeholder="Write Your Pun Here"
-          onChange={handleChange}
-        />
-      </div>
-      <button type="submit" onClick={handleSubmit}>
-        Post Pun
-      </button> */
-
 export default PunsForm;
