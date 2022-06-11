@@ -1,22 +1,52 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-import { Button } from "../Button/Button";
 import "./Nav.css";
 
 function Nav() {
-  const [click, setClick] = useState(false);
-  const [button, setButton] = useState(true);
+  // Hooks
+  const navigate = useNavigate();
 
-  const handleClick = () => setClick(!click);
+  // Actions and Helpers
+  const navigateToLogin = () => {
+    navigate("/login");
+  };
+
+  const handleSignOut = () => {
+    window.localStorage.removeItem("token");
+    navigateToLogin();
+  };
+
+  const checkUser = () => {
+    const isUserLoggedIn = !!window.localStorage.getItem("token");
+    // console.log("isUserLoggedIn", isUserLoggedIn)
+
+    return isUserLoggedIn ? (
+      <a href="logout" onClick={handleSignOut} className="button">
+        Log out
+      </a>
+    ) : (
+      <a href="login" onClick={navigateToLogin} className="button">
+        Log in
+      </a>
+    );
+  };
+
+  // function Nav() {
+  //   const [click, setClick] = useState(false);
+  //   const [button, setButton] = useState(true);
+
+  //   const handleClick = () => setClick(!click);
 
   return (
     <section className="navbar">
       <nav className="left-menu">
-        <Link className="button" to="/">
-          SEAVA{" "}
-        </Link>
-        <Link className="button" to="/project/create/">
+        <div className="logo">
+          <Link className="button" to="/">
+            SEAVA{" "}
+          </Link>
+        </div>
+        <Link className="button" to="/projects/create/">
           Create Project{" "}
         </Link>
         <Link className="button" to="/puns/">
@@ -25,7 +55,7 @@ function Nav() {
       </nav>
       <nav className="right-menu">
         <Link className="button" to="/login/">
-          Login{" "}
+          {checkUser()}
         </Link>
       </nav>
     </section>
