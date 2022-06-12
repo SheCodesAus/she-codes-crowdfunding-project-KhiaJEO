@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 // Imports
 import { useNavigate } from "react-router-dom";
-// import { useParams } from "react-router-dom";
 
 // Styles
 import "./PunsForm.css";
@@ -24,7 +23,7 @@ function PunsForm(punsData) {
   };
 
   const handleSubmit = async (event) => {
-    // event.preventDefault();
+    event.preventDefault();
 
     const token = window.localStorage.getItem("token");
     console.log("handleSubmit", puns, token);
@@ -41,7 +40,7 @@ function PunsForm(punsData) {
           },
           body: JSON.stringify({
             post: puns.post,
-            // date_posted: new Date(puns.date_posted).toISOString(),
+            date_posted: new Date(puns.date_posted).toISOString(),
           }),
         });
         const data = await response.json();
@@ -62,12 +61,12 @@ function PunsForm(punsData) {
       placeholder: "--write your pun here--",
       type: "text",
     },
-    // {
-    //   id: "date_posted",
-    //   label: "",
-    //   placeholder: "Date posted",
-    //   type: "date",
-    // },
+    {
+      id: "date_posted",
+      label: "",
+      placeholder: "Date posted",
+      type: "date",
+    },
   ];
 
   return (
@@ -75,7 +74,7 @@ function PunsForm(punsData) {
       <h3> ... </h3>
       {punsField.map((field, key) => {
         return (
-          <div className="row" key={`$key}-$(field.id}`}>
+          <div className="row" key={`${key}-${field.id}`}>
             <div className="post-label">
               <label htmlFor={field.id}>{field.label}</label>
             </div>

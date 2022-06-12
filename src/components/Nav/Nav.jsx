@@ -18,20 +18,20 @@ function Nav() {
   };
   // Check user for log in and log out
 
-  // const checkUser = () => {
-  //   const isUserLoggedIn = !!window.localStorage.getItem("token");
-  //   // console.log("isUserLoggedIn", isUserLoggedIn)
+  const checkUser = () => {
+    const isUserLoggedIn = !!window.localStorage.getItem("token");
+    console.log("isUserLoggedIn", isUserLoggedIn);
 
-  //   return isUserLoggedIn ? (
-  //     <a href="logout" onClick={handleSignOut} className="button">
-  //       Log out
-  //     </a>
-  //   ) : (
-  //     <a href="login" onClick={navigateToLogin} className="button">
-  //       Log in
-  //     </a>
-  //   );
-  // };
+    return isUserLoggedIn ? (
+      <a href="logout" onClick={handleSignOut} className="button">
+        Log out
+      </a>
+    ) : (
+      <a href="login" onClick={navigateToLogin} className="button">
+        Log in
+      </a>
+    );
+  };
 
   return (
     <section className="navbar">
@@ -49,7 +49,7 @@ function Nav() {
       </nav>
       <nav className="right-menu">
         <Link className="button" to="/login/">
-          {/* {checkUser()} */}
+          {checkUser()}
           {/* this is for the login and log out */}
         </Link>
       </nav>
