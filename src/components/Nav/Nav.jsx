@@ -16,36 +16,30 @@ function Nav() {
     window.localStorage.removeItem("token");
     navigateToLogin();
   };
+  // Check user for log in and log out
 
-  const checkUser = () => {
-    const isUserLoggedIn = !!window.localStorage.getItem("token");
-    // console.log("isUserLoggedIn", isUserLoggedIn)
+  // const checkUser = () => {
+  //   const isUserLoggedIn = !!window.localStorage.getItem("token");
+  //   // console.log("isUserLoggedIn", isUserLoggedIn)
 
-    return isUserLoggedIn ? (
-      <a href="logout" onClick={handleSignOut} className="button">
-        Log out
-      </a>
-    ) : (
-      <a href="login" onClick={navigateToLogin} className="button">
-        Log in
-      </a>
-    );
-  };
-
-  // function Nav() {
-  //   const [click, setClick] = useState(false);
-  //   const [button, setButton] = useState(true);
-
-  //   const handleClick = () => setClick(!click);
+  //   return isUserLoggedIn ? (
+  //     <a href="logout" onClick={handleSignOut} className="button">
+  //       Log out
+  //     </a>
+  //   ) : (
+  //     <a href="login" onClick={navigateToLogin} className="button">
+  //       Log in
+  //     </a>
+  //   );
+  // };
 
   return (
     <section className="navbar">
       <nav className="left-menu">
-        <div className="logo">
-          <Link className="button" to="/">
-            SEAVA{" "}
-          </Link>
-        </div>
+        <Link className="button" to="/">
+          SEAVA{" "}
+        </Link>
+
         <Link className="button" to="/projects/create/">
           Create Project{" "}
         </Link>
@@ -55,7 +49,8 @@ function Nav() {
       </nav>
       <nav className="right-menu">
         <Link className="button" to="/login/">
-          {checkUser()}
+          {/* {checkUser()} */}
+          {/* this is for the login and log out */}
         </Link>
       </nav>
     </section>

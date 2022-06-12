@@ -30,7 +30,8 @@ function PunsForm(punsData) {
     console.log("handleSubmit", puns, token);
 
     // Is user logged in and have they put something in all fields?
-    if (token && puns.post && puns.date_posted) {
+    // Removed && date_posted from if statement
+    if (token && puns.post) {
       try {
         const response = await fetch(`${process.env.REACT_APP_API_URL}puns/`, {
           method: "post",
@@ -40,7 +41,7 @@ function PunsForm(punsData) {
           },
           body: JSON.stringify({
             post: puns.post,
-            date_posted: new Date(puns.date_posted).toISOString(),
+            // date_posted: new Date(puns.date_posted).toISOString(),
           }),
         });
         const data = await response.json();
