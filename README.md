@@ -4,7 +4,7 @@ login details:
 username: ocean
 password: theoceaniswet!
 
-Here is the link to my frontend app: https://lit-reaches-43842.herokuapp.com/
+Here is the link to my frontend app: https://murmuring-wave-06191.herokuapp.com/
 
 Hello I hope this project finds you.
 
