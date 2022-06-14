@@ -1,0 +1,47 @@
+.form {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+}
+
+.login {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  padding: 15px 15px;
+}
+
+/* .login-wrapper label {
+  justify-content: center;
+  align-items: center;
+} */
+
+.login-wrapper input {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  /* background: transparent; */
+  /* background: rgba(255, 255, 255, 0.2); */
+  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  justify-content: center;
+}
+
+.login-wrapper input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 0.5px solid dimgray;
+}
+
+.login-wrapper input:hover {
+  border-bottom: 0.5px solid dimgray;
+  transition: 0.5s all ease-in-out;
+}
+
+.login-button {
+  display: flex;
+  justify-content: center;
+  padding-top: 12px;
+}

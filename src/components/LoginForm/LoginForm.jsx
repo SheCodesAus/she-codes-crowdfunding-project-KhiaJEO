@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./LoginForm.css";
 
 function LoginForm() {
   // State
@@ -73,27 +74,31 @@ function LoginForm() {
 
   return (
     <form>
-      <div>
-        <label htmlFor="username">Username:</label>
-        <input
-          type="text"
-          id="username"
-          placeholder="Enter username"
-          onChange={handleChange}
-        />
+      <div className="login">
+        <div className="login-wrapper">
+          {/* <label htmlFor="username">Username:</label> */}
+          <input
+            type="text"
+            id="username"
+            placeholder="Enter username"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="login-wrapper">
+          {/* <label htmlFor="password">Password:</label> */}
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="login-button">
+          <button type="submit" onClick={handleSubmit}>
+            Login
+          </button>
+        </div>
       </div>
-      <div>
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          placeholder="Password"
-          onChange={handleChange}
-        />
-      </div>
-      <button type="submit" onClick={handleSubmit}>
-        Login
-      </button>
     </form>
   );
 }
