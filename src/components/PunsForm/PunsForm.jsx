@@ -47,7 +47,7 @@ function PunsForm(punsData) {
         console.log(data);
 
         // THIS IS HOW YOU NAVIGATE AUTOMATICALLY
-        navigate(`/puns/`);
+        navigate(`/`);
       } catch (err) {
         console.log(err);
       }
@@ -61,12 +61,12 @@ function PunsForm(punsData) {
       placeholder: "--write your pun here--",
       type: "text",
     },
-    // {
-    //   id: "date_posted",
-    //   label: "",
-    //   placeholder: "Date posted",
-    //   type: "date",
-    // },
+    {
+      id: "date_posted",
+      label: "",
+      placeholder: "Date posted",
+      type: "date",
+    },
   ];
 
   return (
